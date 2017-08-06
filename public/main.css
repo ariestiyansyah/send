@@ -1,12 +1,8 @@
 /***     index.html     ***/
 html {
   background: url('resources/send_bg.svg');
-  font-family: -apple-system,
-    BlinkMacSystemFont,
-    'SF Pro Text',
-    Helvetica,
-    Arial,
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', Helvetica,
+    Arial, sans-serif;
   font-weight: 200;
   background-size: 110%;
   background-repeat: no-repeat;
@@ -39,6 +35,14 @@ body {
   align-items: center;
 }
 
+.send-logo h1 {
+  transition: color 50ms;
+}
+
+.send-logo h1:hover {
+  color: #0297f8;
+}
+
 .send-logo > a {
   display: flex;
   flex-direction: row;
@@ -67,7 +71,7 @@ body {
   transition: color 50ms;
 }
 
-.send-logo:hover a {
+.site-subtitle a:hover {
   color: #0297f8;
 }
 
@@ -266,6 +270,11 @@ tbody {
 .icon-copy,
 .icon-check {
   cursor: pointer;
+}
+
+.icon-copy[disabled="disabled"] {
+  pointer-events: none;
+  opacity: 0.3;
 }
 
 /* Popup container */
@@ -500,6 +509,7 @@ tbody {
   background: #05a700;
   border: 1px solid #05a700;
   cursor: auto;
+  opacity: 0.3;
 }
 
 #delete-file {

@@ -40,21 +40,21 @@ sendAnotherFileLink = Enviar outro arquivo
     .title = Enviar outro arquivo
 // Alternative text used on the download link/button (indicates an action).
 downloadAltText
-    .alt = Download
-downloadFileName = Download { $filename }
+    .alt = Baixar
+downloadFileName = Baixar { $filename }
 downloadFileSize = ({ $size })
 // Firefox Send is a brand name and should not be localized.
-downloadMessage = Seu amigo está te enviando um arquivo através do Firefox Send, um serviço que permite compartilhar arquivos com segurança, privacidade e um link encriptado que automaticamente expira para garantir que suas coisas não permaneçam on-line eternamente.
+downloadMessage = Seu amigo está te enviando um arquivo através do Firefox Send, um serviço que permite compartilhar arquivos com um link seguro, privado e criptografado que automaticamente expira para garantir que suas coisas não permaneçam on-line eternamente.
 // Text and title used on the download link/button (indicates an action).
-downloadButtonLabel = Download
-    .title = Download
+downloadButtonLabel = Baixar
+    .title = Baixar
 downloadNotification = Seu download terminou.
 downloadFinish = Download completo
 // Firefox Send is a brand name and should not be localized. Title text for button should be the same.
 sendYourFilesLink = Experimente o Firefox Send
     .title = Experimente o Firefox Send
 downloadingPageProgress = Baixando { $filename } ({ $size })
-downloadingPageMessage = Por favor deixe essa aba aberta enquanto buscamos seu arquivo e o decriptamos.
+downloadingPageMessage = Por favor, deixe essa aba aberta enquanto buscamos seu arquivo e o descriptografamos.
 errorAltText
     .alt = Erro no envio
 errorPageHeader = Oops, ocorreu um erro!
@@ -67,7 +67,8 @@ expiredPageHeader = Esse link expirou, ou talvez nunca tenha existido!
 notSupportedHeader = Seu navegador não tem suporte.
 // Firefox Send is a brand name and should not be localized.
 notSupportedDetail = Infelizmente esse navegador não suporta a tecnologia utilizada pelo Firefox Send. Tente com outro navegador. Nós recomendamos o Firefox! ;-)
-notSupportedOutdatedDetail = Infelizmente esta versão do Firefox não suporta a tecnologia web que faz o Firefox Send funcionar. Você precisa atualizar o seu navegador.
+notSupportedLink = Por que meu navegador não é suportado?
+notSupportedOutdatedDetail = Infelizmente essa versão do Firefox não suporta a tecnologia web que faz o Firefox Send funcionar. Você precisa atualizar o seu navegador.
 updateFirefox = Atualizar o Firefox
 downloadFirefoxButtonSub = Download gratuito
 uploadedFile = Arquivo
@@ -78,15 +79,15 @@ deleteFileList = Excluir
 nevermindButton = Esqueça
 legalHeader = Termos e privacidade
 legalNoticeTestPilot = Firefox Send é um experimento do Test Pilot, e sujeito aos <a>Termos de Serviço</a> e <a>Políticas de Privacidade</a> do Test Pilot. Você pode aprender mais sobre esse experimento e a coleta de dados <a>aqui</a>.
-legalNoticeMozilla = O uso do site Firefox Send também está sujeito a <a>Política de Privacidade</a> e <a>Websites Terms of Use</a> da Mozilla.
-deletePopupText = Excluir este arquivo
+legalNoticeMozilla = O uso do site Firefox Send também está sujeito a <a>Política de Privacidade</a> e ao <a>Termos de Uso de Sites</a> da Mozilla.
+deletePopupText = Excluir este arquivo?
 deletePopupYes = Sim
 deletePopupCancel = Cancelar
 deleteButtonHover
     .title = Excluir
 copyUrlHover
     .title = Copiar URL
-footerLinkLegal = Legal
+footerLinkLegal = Jurídico
 // Test Pilot is a proper name and should not be localized.
 footerLinkAbout = Sobre o Test Pilot
 footerLinkPrivacy = Privacidade

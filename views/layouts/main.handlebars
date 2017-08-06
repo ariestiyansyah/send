@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Firefox Send</title>
-  <script src="/jsconfig.js"></script>
-  <link rel="stylesheet" type="text/css" href="/main.css" />
-  <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <meta name="defaultLanguage" content="en-US">
   <meta name="availableLanguages" content="{{availableLanguages}}">
 
+  <title>Firefox Send</title>
+
+  <link rel="stylesheet" type="text/css" href="/main.css" />
+  {{#if fira}}
+  <link rel="stylesheet" type="text/css" href="https://code.cdn.mozilla.net/fonts/fira.css" />
+  {{/if}}
+
   <link rel="icon" type="image/png" href="/resources/favicon-32x32.png" sizes="32x32" />
   <link rel="localization" href="/locales/{locale}/send.ftl">
+
+  <script src="/jsconfig.js"></script>
+  <script src="/polyfill.min.js"></script>
   <script defer src="/l20n.min.js"></script>
 </head>
 <body>
@@ -21,27 +28,32 @@
         <img src="/resources/send_logo.svg" alt="Send"/><h1 class="site-title">Send</h1>
       </a>
       <div class="site-subtitle">
-        <a href="https://testpilot.firefox.com" target="_blank">Firefox Test Pilot</a>
+        <a href="https://testpilot.firefox.com">Firefox Test Pilot</a>
         <div data-l10n-id="siteSubtitle">web experiment</div>
       </div>
     </div>
     <a href="https://qsurvey.mozilla.com/s3/txp-firefox-send" rel="noreferrer noopener" class="feedback" target="_blank" data-l10n-id="siteFeedback">Feedback</a>
   </header>
   <div class="all">
+    <noscript>
+      <h2>Firefox Send requires JavaScript</h2>
+      <p><a href="https://github.com/mozilla/send/blob/master/docs/faq.md#why-does-firefox-send-require-javascript">Why does Firefox Send require JavaScript?</a></p>
+      <p>Please enable JavaScript and try again.</p>
+    </noscript>
     {{{body}}}
   </div>
   <div class="footer">
     <div class="legal-links">
       <a href="https://www.mozilla.org"><img class="mozilla-logo" src="/resources/mozilla-logo.svg"/></a>
-      <a href="https://www.mozilla.org/about/legal" data-l10n-id="footerLinkLegal"></a>
-      <a href="https://testpilot.firefox.com/about" data-l10n-id="footerLinkAbout"></a>
-      <a href="/legal" data-l10n-id="footerLinkPrivacy"></a>
-      <a href="/legal" data-l10n-id="footerLinkTerms"></a>
-      <a href="https://www.mozilla.org/privacy/websites/#cookies" data-l10n-id="footerLinkCookies"></a>
+      <a href="https://www.mozilla.org/about/legal" data-l10n-id="footerLinkLegal">Legal</a>
+      <a href="https://testpilot.firefox.com/about" data-l10n-id="footerLinkAbout">About Test Pilot</a>
+      <a href="/legal" data-l10n-id="footerLinkPrivacy">Privacy</a>
+      <a href="/legal" data-l10n-id="footerLinkTerms">Terms</a>
+      <a href="https://www.mozilla.org/privacy/websites/#cookies" data-l10n-id="footerLinkCookies">Cookies</a>
     </div>
     <div class="social-links">
-      <a href="https://github.com/mozilla/send" target="_blank" rel="noreferrer noopener"><img class="github" src="/resources/github-icon.svg"/></a>
-      <a href="https://twitter.com/FxTestPilot" target="_blank" rel="noreferrer noopener"><img class="twitter" src="/resources/twitter-icon.svg"/></a>
+      <a href="https://github.com/mozilla/send"><img class="github" src="/resources/github-icon.svg"/></a>
+      <a href="https://twitter.com/FxTestPilot"><img class="twitter" src="/resources/twitter-icon.svg"/></a>
     </div>
   </div>
 </body>

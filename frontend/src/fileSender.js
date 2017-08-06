@@ -1,8 +1,6 @@
 const EventEmitter = require('events');
 const { arrayToHex } = require('./utils');
 
-const Raven = window.Raven;
-
 class FileSender extends EventEmitter {
   constructor(file) {
     super();
@@ -38,15 +36,14 @@ class FileSender extends EventEmitter {
     const self = this;
     self.emit('loading', true);
     return Promise.all([
-      window.crypto.subtle
-        .generateKey(
-          {
-            name: 'AES-GCM',
-            length: 128
-          },
-          true,
-          ['encrypt', 'decrypt']
-        ),
+      window.crypto.subtle.generateKey(
+        {
+          name: 'AES-GCM',
+          length: 128
+        },
+        true,
+        ['encrypt', 'decrypt']
+      ),
       new Promise((resolve, reject) => {
         const reader = new FileReader();
         reader.readAsArrayBuffer(this.file);
@@ -133,10 +130,6 @@ class FileSender extends EventEmitter {
           );
           xhr.send(fd);
         });
-      })
-      .catch(err => {
-        Raven.captureException(err);
-        return Promise.reject(err);
       });
   }
 }
